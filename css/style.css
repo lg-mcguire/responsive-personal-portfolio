@@ -1,5 +1,30 @@
+:root {
+    /* Backgrounds */
+    --bg-primary: #121212;
+    --bg-secondary: #1f1f1f;
+
+    /* Text */
+    --text-primary: #f8f9fa;
+    --text-secondary: #c0c0c0;
+
+    /* Accent & Highlight */
+    --accent-color: #0d6efd;
+    --highlight-color: #ff6b6b;
+
+    }
+
+/* CSS Reset */
 * {
     margin: 0;
     padding: 0;
-    background-color: gray;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+a:hover {
+    color: var(--highlight-color)
 }
