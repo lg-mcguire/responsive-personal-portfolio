@@ -9,7 +9,7 @@
 
     /* Accent & Highlight */
     --accent-color: #0d6efd;
-    --highlight-color: #ff6b6b;
+    --highlight-color: #6f42c1;
 
     }
 
@@ -23,6 +23,13 @@
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
+}
+h1, h2, h3, h4 {
+    color: var(--accent-color)
+}
+
+.btn-primary {
+    border: none;
 }
 
 a:hover {
