@@ -28,9 +28,9 @@ body {
     line-height: 1.6;
     padding-top: 70px;
 }
-h1, h2, h3, h4 {
-    color: var(--accent-color);
-    text-align: center;
+
+html {
+    scroll-behavior: smooth;
 }
 
 #navbar {
@@ -53,6 +53,61 @@ h1, h2, h3, h4 {
     border: none;
 }
 
+.hero .hero-title {
+    font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+    line-height: 1.05;
+    font-weight: bold;
+    color: var(--text-primary);
+    margin-bottom: .25rem;
+}
+
+.hero .hero-subtitle {
+    font-size: 1.05rem;
+    color:var(--text-secondary);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.section-title {
+    color:var(--accent-color);
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+.hero {
+    background: linear-gradient(135deg, rgba(111,66,193,0.06) 0%, rgba(13,110,253,0,04) 100%), var(--bg-primary);
+    color: var(--text-primary);
+    min-height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.hero-img {
+    max-width: 320px;
+    width: 85%;
+    border-radius: 50%;
+    border: 6px solid rgba(255,255,255,0.03);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.65);
+    transition: transform .35 ease, box-shadow .35s ease;
+    display: inline-block;
+}
+
+.hero-img:hover, .hero-img:focus {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.75);
+    outline: none;
+}
+
+.hero p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-img, .btn-cta {transition: none !important;}
+}
+
 .card {
     background-color: var(--bg-secondary);
     color: var(--text-primary);
@@ -64,6 +119,26 @@ h1, h2, h3, h4 {
 }
 .btn-primary:hover {
     background-color: var(--highlight-color);
+}
+
+.btn-cta {
+    background: linear-gradient(90deg, var(--highlight-color), var(--accent-color));
+    color: #fff;
+    border: none;
+    padding: .6rem 1.1rem;
+    border-radius: .5rem;
+    box-shadow: 0 10px 30px rgba(111,66,193,0.14);
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.btn-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 36px rgba(111,66,193,0.22);
+}
+
+.btn-cta:focus {
+    box-shadow: 0 0 0 4px rgba(111,66,193,0.16), 0 16px 36px rgba(111,66,193,0.22);
+    outline: none;;
 }
 
 footer {
