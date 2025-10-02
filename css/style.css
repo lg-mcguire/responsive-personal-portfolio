@@ -114,6 +114,10 @@ html {
     border: none;
 }
 
+.card p {
+    color: var(--text-secondary);
+}
+
 .card-title {
     color: var(--accent-color)
 }
